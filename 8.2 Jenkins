@@ -32,6 +32,14 @@ pipeline {
         bat 'npm audit || exit /b 0' // This will show known CVEs in the output 
       } 
     } 
- 
+    stage('SonarCloud Analysis') { 
+      steps { 
+        script {
+                    withCredentials([string(credentialsId: 'token', variable: 'TOKEN')]) {
+                        bat 'echo "${Token}"'
+                    }
+                }
+      } 
+    } 
   } 
 }
