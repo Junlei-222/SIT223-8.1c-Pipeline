@@ -36,7 +36,7 @@ pipeline {
       steps { 
         script {
                     withCredentials([string(credentialsId: 'token', variable: 'TOKEN')]) {
-                        echo "${Token}"
+                        sh "/root/sonar-scanner-7.1.0.4889-linux-x64/bin/sonar-scanner"
                     }
                 }
       } 
