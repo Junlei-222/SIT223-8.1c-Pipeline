@@ -36,7 +36,8 @@ pipeline {
       steps { 
         script {
                     withCredentials([string(credentialsId: 'token', variable: 'TOKEN')]) {
-                        bat 'echo "${Token}"'
+                        bat "echo TOKEN is: %TOKEN%"
+                        bat 'sonar-scanner.bat -v'
                     }
                 }
       } 
