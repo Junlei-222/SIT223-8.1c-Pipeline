@@ -4,41 +4,41 @@ pipeline {
   stages { 
     stage('Build') { 
       steps { 
-        sh 'echo build' 
+        sh 'echo Maven' 
       } 
     } 
  
     stage('Unit and Integration Tests') { 
       steps { 
-        sh 'echo build' 
+        sh 'echo "test automation tools"' 
       } 
     } 
  
     stage('Code Analysis') { 
       steps { 
-        sh 'echo build' 
+        sh 'echo "Integrate a code analysis tool"' 
       } 
     } 
  
     stage('Security Scan') { 
       steps { 
-        sh 'echo build' 
+        sh 'echo "a security scan on the code using a tool "' 
       } 
     } 
  
     stage('Deploy to Staging') { 
       steps { 
-        sh 'echo build'
+        sh 'echo "Deploy the application"'
       } 
     } 
     stage('Integration Tests on Staging') { 
       steps { 
-        sh 'echo build'
+        sh 'echo "Run integration tests on the staging"'
       } 
     } 
     stage('Deploy to Production') { 
       steps { 
-        sh 'echo build'
+        sh 'echo "Deploy the application to a production server"'
       } 
     } 
   } 
